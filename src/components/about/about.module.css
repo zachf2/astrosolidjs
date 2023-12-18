@@ -1,0 +1,22 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 30rem;
+  margin: 6rem auto;
+  gap: 3rem;
+
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 0.8rem;
+}
+
+code {
+  background-color: rgb(48, 52, 56);
+  color: rgb(107, 107, 107);
+  text-align: start;
+  padding: 1rem;
+  border-radius: 1rem;
+}
