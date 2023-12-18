@@ -1,0 +1,19 @@
+.side-header {
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 0.6rem !important;
+  font-size: 0.6rem;
+  gap: 0.6rem !important;
+
+  align-items: start !important;
+  border-bottom-left-radius: 0 !important;
+  border-right: solid 3px black;
+  width: fit-content !important;
+}
+
+.side-header nav {
+  flex-direction: column;
+  gap: 0.6rem;
+}

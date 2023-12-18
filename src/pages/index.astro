@@ -4,9 +4,34 @@ import Layout from "../layouts/layout.astro";
 import Hero from "../components/hero/hero.jsx";
 import About from "../components/about/about.jsx";
 ---
+
 <Layout title="Solid|Astro">
   <Hero></Hero>
   <About>
-    Well no worries, the devs at astro managed to create a plugin for your two favorite frameworks its seamless and ridiculously easy to add and its as easy as two commands (cuz its two commands)
+    Well no worries, the devs at astro managed to create a
+    plugin for your two favorite frameworks its seamless and
+    ridiculously easy to add and its as easy as two commands
+    (cuz its two commands)
   </About>
+
+  <script>
+    let added = false;
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (document.documentElement.getBoundingClientRect().top < -40) {
+        if (!added) {
+          header.classList.add("side-header")
+          added = true;
+        }
+        
+      } else {
+        if (document.documentElement.getBoundingClientRect().top >= -40 && added) {
+          // console.log(document.documentElement.getBoundingClientRect().top)
+          
+          header.classList.remove("side-header");
+          added = false;
+        }
+      }
+    });
+  </script>
 </Layout>
